@@ -424,28 +424,46 @@
             display: block;
         }
         
-        /* Product Carousel Styles */
-        .product-carousel {
+        /* Product image link styles */
+        .product-image-link {
             position: relative;
-            width: 100%;
-            max-width: 220px;
-            height: 180px;
-            margin: 10px auto;
+            display: block;
+            height: 220px;
             overflow: hidden;
-            border-radius: 5px;
+            border-radius: 5px 5px 0 0;
         }
-
-        .carousel-images {
-            display: flex;
-            transition: transform 0.3s ease-in-out;
-            height: 100%;
-        }
-
-        .carousel-images img {
+        
+        .product-image-link img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+        
+        .product-image-link:hover img {
+            transform: scale(1.05);
+        }
+        
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .product-image-link:hover .image-overlay {
+            transform: translateY(0);
+        }
+        
+        .view-more {
+            font-size: 14px;
+            font-weight: bold;
         }
 
         .carousel-nav {
@@ -762,7 +780,7 @@
                   Make sure to place your logo in your images folder
                   Recommended size: at least 40x40 pixels, PNG format with transparency
                 -->
-                <img src="shop-images/header-logo.png" alt="The Board Viking Logo" width="40" height="40">
+                <img src="/path/to/your/black-viking-logo.png" alt="The Board Viking Logo" width="40" height="40">
                 <!-- ========================================== -->
             </div>
             <div>The Board Viking</div>
@@ -822,22 +840,12 @@
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-image">
-                    <!-- Product Carousel for Featured Product -->
-                    <div class="product-carousel" id="mansions-dashboard-carousel">
-                        <div class="carousel-images">
-                            <!-- Replace these paths with your actual image paths -->
-                            <img src="shop-images/mansions-of-madness/playerboard-figures-left-black.JPG" alt="Mansions of Madness Dashboard - Front View">
-                            <img src="shop-images/mansions-of-madness/playerboard-figures-clues-black.JPG" alt="Mansions of Madness Dashboard - With Cards">
-                            <img src="shop-images/mansions-of-madness/playerboard-actions.JPG" alt="Mansions of Madness Dashboard - In Use">
+                    <a href="products/mansions-dashboard.html" class="product-image-link">
+                        <img src="images/mansions-dashboard-1.jpg" alt="Mansions of Madness Player Dashboard">
+                        <div class="image-overlay">
+                            <span class="view-more">View More Images</span>
                         </div>
-                        <div class="carousel-nav">
-                            <span class="carousel-dot active" data-slide="0"></span>
-                            <span class="carousel-dot" data-slide="1"></span>
-                            <span class="carousel-dot" data-slide="2"></span>
-                        </div>
-                        <button class="carousel-prev">&lt;</button>
-                        <button class="carousel-next">&gt;</button>
-                    </div>
+                    </a>
                 </div>
                 <div class="product-info">
                     <div class="game-title">Mansions of Madness</div>
@@ -868,22 +876,12 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <!-- Product Carousel for Featured Product -->
-                    <div class="product-carousel" id="2d6-board-carousel">
-                        <div class="carousel-images">
-                            <!-- Replace these paths with your actual image paths -->
-                            <img src="images/2d6-board-1.jpg" alt="2D6 Dungeon Player Board - Top View">
-                            <img src="images/2d6-board-2.jpg" alt="2D6 Dungeon Player Board - With Components">
-                            <img src="images/2d6-board-3.jpg" alt="2D6 Dungeon Player Board - In Game">
+                    <a href="products/2d6-board.html" class="product-image-link">
+                        <img src="images/2d6-board-1.jpg" alt="2D6 Dungeon Player Board">
+                        <div class="image-overlay">
+                            <span class="view-more">View More Images</span>
                         </div>
-                        <div class="carousel-nav">
-                            <span class="carousel-dot active" data-slide="0"></span>
-                            <span class="carousel-dot" data-slide="1"></span>
-                            <span class="carousel-dot" data-slide="2"></span>
-                        </div>
-                        <button class="carousel-prev">&lt;</button>
-                        <button class="carousel-next">&gt;</button>
-                    </div>
+                    </a>
                 </div>
                 <div class="product-info">
                     <div class="game-title">2D6 Dungeon</div>
@@ -914,22 +912,12 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <!-- Product Carousel for Featured Product -->
-                    <div class="product-carousel" id="touch-of-evil-carousel">
-                        <div class="carousel-images">
-                            <!-- Replace these paths with your actual image paths -->
-                            <img src="images/touch-of-evil-1.jpg" alt="A Touch of Evil Player Board - Front View">
-                            <img src="images/touch-of-evil-2.jpg" alt="A Touch of Evil Player Board - With Cards">
-                            <img src="images/touch-of-evil-3.jpg" alt="A Touch of Evil Player Board - Detail View">
+                    <a href="products/touch-of-evil.html" class="product-image-link">
+                        <img src="images/touch-of-evil-1.jpg" alt="A Touch of Evil Player Board">
+                        <div class="image-overlay">
+                            <span class="view-more">View More Images</span>
                         </div>
-                        <div class="carousel-nav">
-                            <span class="carousel-dot active" data-slide="0"></span>
-                            <span class="carousel-dot" data-slide="1"></span>
-                            <span class="carousel-dot" data-slide="2"></span>
-                        </div>
-                        <button class="carousel-prev">&lt;</button>
-                        <button class="carousel-next">&gt;</button>
-                    </div>
+                    </a>
                 </div>
                 <div class="product-info">
                     <div class="game-title">A Touch of Evil</div>
@@ -1186,22 +1174,12 @@
                 <div class="category-products">
                     <div class="category-product">
                         <h4>Dice Tower <span class="versions-badge premium-only-badge">Premium Only</span></h4>
-                        <!-- Product Carousel -->
-                        <div class="product-carousel" id="dice-tower-carousel">
-                            <div class="carousel-images">
-                                <!-- Replace these paths with your actual image paths -->
-                                <img src="images/dice-tower-1.jpg" alt="Dice Tower - Front View">
-                                <img src="images/dice-tower-2.jpg" alt="Dice Tower - Side View">
-                                <img src="images/dice-tower-3.jpg" alt="Dice Tower - In Use">
+                        <a href="products/dice-tower.html" class="product-image-link" style="height: 180px;">
+                            <img src="images/dice-tower-1.jpg" alt="Dice Tower">
+                            <div class="image-overlay">
+                                <span class="view-more">View More Images</span>
                             </div>
-                            <div class="carousel-nav">
-                                <span class="carousel-dot active" data-slide="0"></span>
-                                <span class="carousel-dot" data-slide="1"></span>
-                                <span class="carousel-dot" data-slide="2"></span>
-                            </div>
-                            <button class="carousel-prev">&lt;</button>
-                            <button class="carousel-next">&gt;</button>
-                        </div>
+                        </a>
                         <p>Elegant dice tower with multiple internal baffles for true randomization. The magnetized lid ensures your dice remain secure between sessions while providing quick access during game night. Available exclusively in our signature Black & White Edition.</p>
                         <a href="https://www.ebay.co.uk/usr/theboardviking" class="product-link">View on eBay</a>
                     </div>
