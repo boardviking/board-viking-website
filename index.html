@@ -415,6 +415,74 @@
             border-color: var(--bw-white);
         }
         
+        .product-thumbnail {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            margin: 10px auto;
+            border-radius: 5px;
+            display: block;
+        }
+        
+        /* Product Carousel Styles */
+        .product-carousel {
+            position: relative;
+            width: 100%;
+            max-width: 220px;
+            margin: 10px auto;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+
+        .carousel-dot.active {
+            background: white;
+        }
+
+        .carousel-prev, .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
         .product-link {
             color: var(--secondary);
             text-decoration: none;
@@ -690,7 +758,7 @@
                   Make sure to place your logo in your images folder
                   Recommended size: at least 40x40 pixels, PNG format with transparency
                 -->
-                <img src="shop-images/header-logo.png" alt="The Board Viking Logo" width="40" height="40">
+                <img src="/path/to/your/black-viking-logo.png" alt="The Board Viking Logo" width="40" height="40">
                 <!-- ========================================== -->
             </div>
             <div>The Board Viking</div>
@@ -750,7 +818,22 @@
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-image">
-                    <img src="shop-images/mansions-of-madness/playerboard-black.jpg" alt="Mansions of Madness Player Dashboard">
+                    <!-- Product Carousel for Featured Product -->
+                    <div class="product-carousel" id="mansions-dashboard-carousel">
+                        <div class="carousel-images">
+                            <!-- Replace these paths with your actual image paths -->
+                            <img src="images/mansions-dashboard-1.jpg" alt="Mansions of Madness Dashboard - Front View">
+                            <img src="images/mansions-dashboard-2.jpg" alt="Mansions of Madness Dashboard - With Cards">
+                            <img src="images/mansions-dashboard-3.jpg" alt="Mansions of Madness Dashboard - In Use">
+                        </div>
+                        <div class="carousel-nav">
+                            <span class="carousel-dot active" data-slide="0"></span>
+                            <span class="carousel-dot" data-slide="1"></span>
+                            <span class="carousel-dot" data-slide="2"></span>
+                        </div>
+                        <button class="carousel-prev">◀</button>
+                        <button class="carousel-next">▶</button>
+                    </div>
                 </div>
                 <div class="product-info">
                     <div class="game-title">Mansions of Madness</div>
@@ -763,7 +846,7 @@
                                 <span class="version-name">Classic MDF</span>
                                 <span class="version-price">£24.99</span>
                             </div>
-                            <div class="version-desc">Natural wood finish with precision laser-cut details</div>
+                            <div class="version-desc">High-grade MDF in its natural form with precision laser-cut details</div>
                         </div>
                         
                         <div class="version-option version-premium">
@@ -781,7 +864,22 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <img src="?" alt="2D6 Dungeon Player Board">
+                    <!-- Product Carousel for Featured Product -->
+                    <div class="product-carousel" id="2d6-board-carousel">
+                        <div class="carousel-images">
+                            <!-- Replace these paths with your actual image paths -->
+                            <img src="images/2d6-board-1.jpg" alt="2D6 Dungeon Player Board - Top View">
+                            <img src="images/2d6-board-2.jpg" alt="2D6 Dungeon Player Board - With Components">
+                            <img src="images/2d6-board-3.jpg" alt="2D6 Dungeon Player Board - In Game">
+                        </div>
+                        <div class="carousel-nav">
+                            <span class="carousel-dot active" data-slide="0"></span>
+                            <span class="carousel-dot" data-slide="1"></span>
+                            <span class="carousel-dot" data-slide="2"></span>
+                        </div>
+                        <button class="carousel-prev">◀</button>
+                        <button class="carousel-next">▶</button>
+                    </div>
                 </div>
                 <div class="product-info">
                     <div class="game-title">2D6 Dungeon</div>
@@ -812,7 +910,22 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <img src="/api/placeholder/280/220" alt="A Touch of Evil Player Board">
+                    <!-- Product Carousel for Featured Product -->
+                    <div class="product-carousel" id="touch-of-evil-carousel">
+                        <div class="carousel-images">
+                            <!-- Replace these paths with your actual image paths -->
+                            <img src="images/touch-of-evil-1.jpg" alt="A Touch of Evil Player Board - Front View">
+                            <img src="images/touch-of-evil-2.jpg" alt="A Touch of Evil Player Board - With Cards">
+                            <img src="images/touch-of-evil-3.jpg" alt="A Touch of Evil Player Board - Detail View">
+                        </div>
+                        <div class="carousel-nav">
+                            <span class="carousel-dot active" data-slide="0"></span>
+                            <span class="carousel-dot" data-slide="1"></span>
+                            <span class="carousel-dot" data-slide="2"></span>
+                        </div>
+                        <button class="carousel-prev">◀</button>
+                        <button class="carousel-next">▶</button>
+                    </div>
                 </div>
                 <div class="product-info">
                     <div class="game-title">A Touch of Evil</div>
@@ -843,7 +956,22 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <img src="/api/placeholder/280/220" alt="Four Against Darkness Player Board">
+                    <!-- Product Carousel for Featured Product -->
+                    <div class="product-carousel" id="four-against-darkness-carousel">
+                        <div class="carousel-images">
+                            <!-- Replace these paths with your actual image paths -->
+                            <img src="images/four-against-1.jpg" alt="Four Against Darkness Board - Empty">
+                            <img src="images/four-against-2.jpg" alt="Four Against Darkness Board - With Tokens">
+                            <img src="images/four-against-3.jpg" alt="Four Against Darkness Board - In Play">
+                        </div>
+                        <div class="carousel-nav">
+                            <span class="carousel-dot active" data-slide="0"></span>
+                            <span class="carousel-dot" data-slide="1"></span>
+                            <span class="carousel-dot" data-slide="2"></span>
+                        </div>
+                        <button class="carousel-prev">◀</button>
+                        <button class="carousel-next">▶</button>
+                    </div>
                 </div>
                 <div class="product-info">
                     <div class="game-title">Four Against Darkness</div>
@@ -881,11 +1009,11 @@
             <div class="version-info-card">
                 <h3><span class="version-icon">🪵</span> Classic MDF</h3>
                 <ul>
-                    <li>Natural wood finish</li>
+                    <li>High-grade MDF in its natural form</li>
                     <li>Premium laser-cut precision</li>
-                    <li>Durable and lightweight</li>
+                    <li>Lightweight yet durable construction</li>
                     <li>Most economical option</li>
-                    <li>Authentic artisan appearance</li>
+                    <li>Authentic artisan craftsmanship</li>
                 </ul>
             </div>
             
@@ -1054,16 +1182,64 @@
                 <div class="category-products">
                     <div class="category-product">
                         <h4>Dice Tower <span class="versions-badge premium-only-badge">Premium Only</span></h4>
-                        <p>Elegant dice tower with multiple internal baffles for true randomization. The perfect centerpiece for your game table, available exclusively in our signature Black & White Edition.</p>
+                        <!-- Product Carousel -->
+                        <div class="product-carousel" id="dice-tower-carousel">
+                            <div class="carousel-images">
+                                <!-- Replace these paths with your actual image paths -->
+                                <img src="images/dice-tower-1.jpg" alt="Dice Tower - Front View">
+                                <img src="images/dice-tower-2.jpg" alt="Dice Tower - Side View">
+                                <img src="images/dice-tower-3.jpg" alt="Dice Tower - In Use">
+                            </div>
+                            <div class="carousel-nav">
+                                <span class="carousel-dot active" data-slide="0"></span>
+                                <span class="carousel-dot" data-slide="1"></span>
+                                <span class="carousel-dot" data-slide="2"></span>
+                            </div>
+                            <button class="carousel-prev">◀</button>
+                            <button class="carousel-next">▶</button>
+                        </div>
+                        <p>Elegant dice tower with multiple internal baffles for true randomization. The magnetized lid ensures your dice remain secure between sessions while providing quick access during game night. Available exclusively in our signature Black & White Edition.</p>
                         <a href="https://www.ebay.co.uk/usr/theboardviking" class="product-link">View on eBay</a>
                     </div>
                     <div class="category-product">
                         <h4>Dice and Pencil Storage Box <span class="versions-badge premium-only-badge">Premium Only</span></h4>
+                        <!-- Product Carousel -->
+                        <div class="product-carousel" id="dice-pencil-carousel">
+                            <div class="carousel-images">
+                                <!-- Replace these paths with your actual image paths -->
+                                <img src="images/dice-pencil-box-1.jpg" alt="Dice and Pencil Box - Closed">
+                                <img src="images/dice-pencil-box-2.jpg" alt="Dice and Pencil Box - Open">
+                                <img src="images/dice-pencil-box-3.jpg" alt="Dice and Pencil Box - With Contents">
+                            </div>
+                            <div class="carousel-nav">
+                                <span class="carousel-dot active" data-slide="0"></span>
+                                <span class="carousel-dot" data-slide="1"></span>
+                                <span class="carousel-dot" data-slide="2"></span>
+                            </div>
+                            <button class="carousel-prev">◀</button>
+                            <button class="carousel-next">▶</button>
+                        </div>
                         <p>Multi-purpose box designed to store dice sets and gaming pencils. Features a magnetized lid that securely closes with a satisfying snap while allowing easy access during gameplay. Available exclusively in our signature Black & White Edition.</p>
                         <a href="https://www.ebay.co.uk/usr/theboardviking" class="product-link">View on eBay</a>
                     </div>
                     <div class="category-product">
                         <h4>Square Dice Storage Box <span class="versions-badge premium-only-badge">Premium Only</span></h4>
+                        <!-- Product Carousel -->
+                        <div class="product-carousel" id="square-dice-carousel">
+                            <div class="carousel-images">
+                                <!-- Replace these paths with your actual image paths -->
+                                <img src="images/square-dice-box-1.jpg" alt="Square Dice Box - Closed">
+                                <img src="images/square-dice-box-2.jpg" alt="Square Dice Box - Open">
+                                <img src="images/square-dice-box-3.jpg" alt="Square Dice Box - With Dice">
+                            </div>
+                            <div class="carousel-nav">
+                                <span class="carousel-dot active" data-slide="0"></span>
+                                <span class="carousel-dot" data-slide="1"></span>
+                                <span class="carousel-dot" data-slide="2"></span>
+                            </div>
+                            <button class="carousel-prev">◀</button>
+                            <button class="carousel-next">▶</button>
+                        </div>
                         <p>Elegant square box specifically designed for storing and protecting your premium dice collections. The magnetized lid ensures your dice remain secure between sessions while providing quick access during game night. Available exclusively in our signature Black & White Edition.</p>
                         <a href="https://www.ebay.co.uk/usr/theboardviking" class="product-link">View on eBay</a>
                     </div>
