@@ -78,7 +78,7 @@
         }
         
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/600') center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-background.jpg') center/cover;
             height: 70vh;
             display: flex;
             flex-direction: column;
@@ -465,45 +465,6 @@
             font-size: 14px;
             font-weight: bold;
         }
-
-        .carousel-nav {
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        .carousel-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-        }
-
-        .carousel-dot.active {
-            background: white;
-        }
-
-        .carousel-prev, .carousel-next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.3);
-            color: white;
-            border: none;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
         
         .product-link {
             color: var(--secondary);
@@ -774,14 +735,8 @@
     <header>
         <div class="logo">
             <div class="logo-icon">
-                <!-- ============== YOUR LOGO HERE ============== 
-                  Replace the image path below with the path to your logo image file
-                  For example: images/board-viking-logo.png
-                  Make sure to place your logo in your images folder
-                  Recommended size: at least 40x40 pixels, PNG format with transparency
-                -->
-                <img src="shop-images/header-logo.png" alt="The Board Viking Logo" width="40" height="40">
-                <!-- ========================================== -->
+                <!-- Logo image -->
+                <img src="/shop-images/header-logo.png" alt="The Board Viking Logo" width="40" height="40">
             </div>
             <div>The Board Viking</div>
         </div>
@@ -822,7 +777,7 @@
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-image">
-                <img src="/api/placeholder/400/400" alt="Workshop image">
+                <img src="/images/workshop.jpg" alt="Workshop image">
             </div>
             <div class="about-content">
                 <h2>The Craftsman Behind The Board Viking</h2>
@@ -840,8 +795,8 @@
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-image">
-                    <a href="products/mansions-dashboard.html" class="product-image-link">
-                        <img src="shop-images/mansions-of-madness/playerboard-figures-left-black.JPG" alt="Mansions of Madness Player Dashboard">
+                    <a href="/products/mansions-of-madness/playerboard/product-detail-page.html" class="product-image-link">
+                        <img src="/images/products/mansions-of-madness/playerboard/main.jpg" alt="Mansions of Madness Player Dashboard">
                         <div class="image-overlay">
                             <span class="view-more">View More Images</span>
                         </div>
@@ -876,8 +831,8 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <a href="products/2d6-board.html" class="product-image-link">
-                        <img src="images/2d6-board-1.jpg" alt="2D6 Dungeon Player Board">
+                    <a href="/products/2d6-dungeon/playerboard/product-detail-page.html" class="product-image-link">
+                        <img src="/images/products/2d6-dungeon/playerboard/main.jpg" alt="2D6 Dungeon Player Board">
                         <div class="image-overlay">
                             <span class="view-more">View More Images</span>
                         </div>
@@ -912,8 +867,8 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <a href="products/touch-of-evil.html" class="product-image-link">
-                        <img src="images/touch-of-evil-1.jpg" alt="A Touch of Evil Player Board">
+                    <a href="/products/touch-of-evil/playerboard/product-detail-page.html" class="product-image-link">
+                        <img src="/images/products/touch-of-evil/playerboard/main.jpg" alt="A Touch of Evil Player Board">
                         <div class="image-overlay">
                             <span class="view-more">View More Images</span>
                         </div>
@@ -948,22 +903,12 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <!-- Product Carousel for Featured Product -->
-                    <div class="product-carousel" id="four-against-darkness-carousel">
-                        <div class="carousel-images">
-                            <!-- Replace these paths with your actual image paths -->
-                            <img src="images/four-against-1.jpg" alt="Four Against Darkness Board - Empty">
-                            <img src="images/four-against-2.jpg" alt="Four Against Darkness Board - With Tokens">
-                            <img src="images/four-against-3.jpg" alt="Four Against Darkness Board - In Play">
+                    <a href="/products/four-against-darkness/playerboard/product-detail-page.html" class="product-image-link">
+                        <img src="/images/products/four-against-darkness/playerboard/main.jpg" alt="Four Against Darkness Board">
+                        <div class="image-overlay">
+                            <span class="view-more">View More Images</span>
                         </div>
-                        <div class="carousel-nav">
-                            <span class="carousel-dot active" data-slide="0"></span>
-                            <span class="carousel-dot" data-slide="1"></span>
-                            <span class="carousel-dot" data-slide="2"></span>
-                        </div>
-                        <button class="carousel-prev">◀</button>
-                        <button class="carousel-next">▶</button>
-                    </div>
+                    </a>
                 </div>
                 <div class="product-info">
                     <div class="game-title">Four Against Darkness</div>
@@ -1174,8 +1119,8 @@
                 <div class="category-products">
                     <div class="category-product">
                         <h4>Dice Tower <span class="versions-badge premium-only-badge">Premium Only</span></h4>
-                        <a href="products/dice-tower.html" class="product-image-link" style="height: 180px;">
-                            <img src="images/dice-tower-1.jpg" alt="Dice Tower">
+                        <a href="/products/dice-tower/product-detail-page.html" class="product-image-link" style="height: 180px;">
+                            <img src="/images/products/dice-tower/main.jpg" alt="Dice Tower">
                             <div class="image-overlay">
                                 <span class="view-more">View More Images</span>
                             </div>
@@ -1185,43 +1130,23 @@
                     </div>
                     <div class="category-product">
                         <h4>Dice and Pencil Storage Box <span class="versions-badge premium-only-badge">Premium Only</span></h4>
-                        <!-- Product Carousel -->
-                        <div class="product-carousel" id="dice-pencil-carousel">
-                            <div class="carousel-images">
-                                <!-- Replace these paths with your actual image paths -->
-                                <img src="images/dice-pencil-box-1.jpg" alt="Dice and Pencil Box - Closed">
-                                <img src="images/dice-pencil-box-2.jpg" alt="Dice and Pencil Box - Open">
-                                <img src="images/dice-pencil-box-3.jpg" alt="Dice and Pencil Box - With Contents">
+                        <a href="/products/dice-pencil-box/product-detail-page.html" class="product-image-link" style="height: 180px;">
+                            <img src="/images/products/dice-pencil-box/main.jpg" alt="Dice and Pencil Box">
+                            <div class="image-overlay">
+                                <span class="view-more">View More Images</span>
                             </div>
-                            <div class="carousel-nav">
-                                <span class="carousel-dot active" data-slide="0"></span>
-                                <span class="carousel-dot" data-slide="1"></span>
-                                <span class="carousel-dot" data-slide="2"></span>
-                            </div>
-                            <button class="carousel-prev">&lt;</button>
-                            <button class="carousel-next">&gt;</button>
-                        </div>
+                        </a>
                         <p>Multi-purpose box designed to store dice sets and gaming pencils. Features a magnetized lid that securely closes with a satisfying snap while allowing easy access during gameplay. Available exclusively in our signature Black & White Edition.</p>
                         <a href="https://www.ebay.co.uk/usr/theboardviking" class="product-link">View on eBay</a>
                     </div>
                     <div class="category-product">
                         <h4>Square Dice Storage Box <span class="versions-badge premium-only-badge">Premium Only</span></h4>
-                        <!-- Product Carousel -->
-                        <div class="product-carousel" id="square-dice-carousel">
-                            <div class="carousel-images">
-                                <!-- Replace these paths with your actual image paths -->
-                                <img src="images/square-dice-box-1.jpg" alt="Square Dice Box - Closed">
-                                <img src="images/square-dice-box-2.jpg" alt="Square Dice Box - Open">
-                                <img src="images/square-dice-box-3.jpg" alt="Square Dice Box - With Dice">
+                        <a href="/products/square-dice-box/product-detail-page.html" class="product-image-link" style="height: 180px;">
+                            <img src="/images/products/square-dice-box/main.jpg" alt="Square Dice Box">
+                            <div class="image-overlay">
+                                <span class="view-more">View More Images</span>
                             </div>
-                            <div class="carousel-nav">
-                                <span class="carousel-dot active" data-slide="0"></span>
-                                <span class="carousel-dot" data-slide="1"></span>
-                                <span class="carousel-dot" data-slide="2"></span>
-                            </div>
-                            <button class="carousel-prev">&lt;</button>
-                            <button class="carousel-next">&gt;</button>
-                        </div>
+                        </a>
                         <p>Elegant square box specifically designed for storing and protecting your premium dice collections. The magnetized lid ensures your dice remain secure between sessions while providing quick access during game night. Available exclusively in our signature Black & White Edition.</p>
                         <a href="https://www.ebay.co.uk/usr/theboardviking" class="product-link">View on eBay</a>
                     </div>
@@ -1229,3 +1154,102 @@
             </div>
         </div>
     </section>
+    
+    <section id="process" class="process-section">
+        <h2>Crafting Process</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Design</h3>
+                <p>Each product begins with careful design based on actual gameplay experience, ensuring optimal functionality and fit.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Prototype</h3>
+                <p>Designs are tested and refined through multiple prototypes and playthroughs to perfect every detail.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Production</h3>
+                <p>Precision laser-cutting transforms premium MDF into exact shapes with clean, detailed edges.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Finishing</h3>
+                <p>Each piece is hand-finished, with Black & White Editions receiving our signature treatment and protective coating.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <h2>What Gamers Are Saying</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The player board completely transformed my Mansions of Madness experience. Everything is so well-organized now - no more hunting for tokens or cards during the game!"</p>
+                <p class="testimonial-author">Michael S.</p>
+                <p class="game-reference">Mansions of Madness Player Dashboard</p>
+                <p class="edition-reference">Black & White Edition</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Exceptional quality and attention to detail. The pieces fit perfectly together, and the Black & White Edition looks stunning on my gaming table."</p>
+                <p class="testimonial-author">Sarah T.</p>
+                <p class="game-reference">Arkham Horror LCG Investigator Dashboard</p>
+                <p class="edition-reference">Black & White Edition</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"After using the Four Against Darkness board, I can't imagine playing without it. The encounter tokens are a game-changer for keeping track of my dungeon crawl."</p>
+                <p class="testimonial-author">David L.</p>
+                <p class="game-reference">Four Against Darkness Player Board</p>
+                <p class="edition-reference">Classic MDF</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <h2>Ready to Enhance Your Gaming Experience?</h2>
+        <p>Browse my complete collection on eBay to find the perfect accessories for your favorite games.</p>
+        <a href="https://www.ebay.co.uk/usr/theboardviking" class="cta-button">Visit My eBay Store</a>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Questions about products or custom orders? Get in touch!</p>
+                <p>Email: contact@theboardviking.com</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">IG</a>
+                    <a href="#" class="social-icon">TW</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#products">Featured Products</a></li>
+                    <li><a href="#game-products">All Products</a></li>
+                    <li><a href="https://www.ebay.co.uk/usr/theboardviking">eBay Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#process">Production Process</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 The Board Viking. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for handling image hover effects and navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // If you need any additional JavaScript functionality, add it here
+        });
+    </script>
+</body>
+</html>
