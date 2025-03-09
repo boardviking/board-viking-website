@@ -611,6 +611,31 @@
             background-color: #f0f0f0;
         }
         
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .cta-button-secondary {
+            background-color: transparent;
+            color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .cta-button-secondary:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border-color: var(--secondary);
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+        
         .versions-info {
             display: flex;
             justify-content: center;
@@ -736,7 +761,7 @@
         <div class="logo">
             <div class="logo-icon">
                 <!-- Logo image -->
-                <img src="shop-images/header-logo.png" alt="The Board Viking Logo" width="40" height="40">
+                <img src="/shop-images/header-logo.png" alt="The Board Viking Logo" width="40" height="40">
             </div>
             <div>The Board Viking</div>
         </div>
@@ -753,7 +778,10 @@
     <section class="hero">
         <h1>Elevate Your Gaming Experience</h1>
         <p>Handcrafted, laser-cut organizers and accessories that transform your favorite board games. Each piece designed by a passionate gamer, for gamers.</p>
-        <a href="#products" class="cta-button">View My Creations</a>
+        <div class="hero-buttons">
+            <a href="#products" class="cta-button">View My Creations</a>
+            <a href="https://www.ebay.co.uk/usr/theboardviking" class="cta-button cta-button-secondary">Visit My eBay Store</a>
+        </div>
     </section>
     
     <section class="features">
@@ -795,8 +823,8 @@
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-image">
-                    <a href="product-images/mom-playerboard-figures-left-black.JPG" class="product-image-link">
-                        <img src="product-images/mom-playerboard-figures-side.JPG" alt="Mansions of Madness Player Dashboard">
+                    <a href="/products/mansions-of-madness/playerboard/product-detail-page.html" class="product-image-link">
+                        <img src="/images/products/mansions-of-madness/playerboard/main.jpg" alt="Mansions of Madness Player Dashboard">
                         <div class="image-overlay">
                             <span class="view-more">View More Images</span>
                         </div>
@@ -831,8 +859,8 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <a href="product-images/2d6-playerboard-inplay.JPG" class="product-image-link">
-                        <img src="product-images/2d6-playerboard.JPG" alt="2D6 Dungeon Player Board">
+                    <a href="/products/2d6-dungeon/playerboard/product-detail-page.html" class="product-image-link">
+                        <img src="/images/products/2d6-dungeon/playerboard/main.jpg" alt="2D6 Dungeon Player Board">
                         <div class="image-overlay">
                             <span class="view-more">View More Images</span>
                         </div>
@@ -892,42 +920,6 @@
                             <div class="version-label">
                                 <span class="version-name">Black & White Edition</span>
                                 <span class="version-price">£32.99</span>
-                            </div>
-                            <div class="version-desc">Professionally finished with our proprietary black and white treatment, featuring a moisture-resistant semi-gloss coating for enhanced durability and aesthetic appeal</div>
-                        </div>
-                    </div>
-                    
-                    <a href="https://www.ebay.co.uk/usr/theboardviking" class="view-button">View Options on eBay</a>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">
-                    <a href="/products/four-against-darkness/playerboard/product-detail-page.html" class="product-image-link">
-                        <img src="/images/products/four-against-darkness/playerboard/main.jpg" alt="Four Against Darkness Board">
-                        <div class="image-overlay">
-                            <span class="view-more">View More Images</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="product-info">
-                    <div class="game-title">Four Against Darkness</div>
-                    <h3>Player Board with Tokens</h3>
-                    <p>Complete player solution with encounter tokens, designed specifically for this dungeon-crawling pen-and-paper RPG.</p>
-                    
-                    <div class="product-versions">
-                        <div class="version-option version-standard">
-                            <div class="version-label">
-                                <span class="version-name">Classic MDF</span>
-                                <span class="version-price">£26.99</span>
-                            </div>
-                            <div class="version-desc">Natural wood finish with precision laser-cut details</div>
-                        </div>
-                        
-                        <div class="version-option version-premium">
-                            <div class="version-label">
-                                <span class="version-name">Black & White Edition</span>
-                                <span class="version-price">£36.99</span>
                             </div>
                             <div class="version-desc">Professionally finished with our proprietary black and white treatment, featuring a moisture-resistant semi-gloss coating for enhanced durability and aesthetic appeal</div>
                         </div>
